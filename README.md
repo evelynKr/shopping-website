@@ -1,4 +1,4 @@
-# shopping-website (Semi-project)
+# 🎯shopping-website (Semi-project)
 
 - 세미 프로젝트는 '기업의 개발 프레임 워크를 이해하고, API를 활용한 기능구현 역량 습득' 에 초점을 두고 본 프로젝트에 앞서 팀으로써 개개인의 역량을 발휘하고 각자 업무를 담당하여 서로 협업하는 팀 프로젝트의 초석이 되는 과정이라고 할 수 있습니다.
 - 웹서비스와 Open API를 활용한 웹 서비스 구현했습니다.
@@ -6,7 +6,7 @@
 
 <br />
 
-## Team 1
+## 🤝🏻 Team 1
 
 - 개발기간 : 2022.06.20 - 2022.06.22
 
@@ -20,7 +20,7 @@
 
 <br />
 
-## 사용자별 권한 및 역할
+## ❕ 사용자별 권한 및 역할
 
 - 관리자 : 상품 조회, 회원 목록 관리, 공지사항 등록/수정/삭제
 - 회원 : 나의 정보 주문 내역, 사진 수정, 리뷰 댓글 등록/수정/삭제
@@ -28,7 +28,9 @@
 
 <br />
 
-## 전체 기능 소개
+## 🙌🏻 전체 기능 구현
+- 수정 중입니다.
+- 보완하고 업로드 하고있습니다.
 
 ### Member 
 - [x] 로그인, 회원가입, 아이디 찾기, 패스워드 찾기, 로그아웃
@@ -48,7 +50,7 @@
 
 <br />
 
-## 주기능 소개
+## 💡 주기능 소개
 
 ### 주기능 1) 로그인 페이지(비동기)
 
@@ -83,16 +85,16 @@
 
 <br />
 
-## 느낀점
+## 🙏🏻 느낀점
 - 이번 세미 프로젝트는 저에게 이제까지 학습했던 것을 복습 및 실습 해볼 수 있는 시간이었습니다. 프로젝트를 진행하면서 스스로가 어떤 부분을 정확히 몰랐는지 알게 되서, 어떤 부족한 부분을 보완해야하는지 파악할 수 있었습니다. 이번 세미프로젝트는 제가 생애 처음 구현해 본 프로젝트여서 갈피를 못잡았는데, 강사님과 팀원들이 함께 가이드를 잡아주고  문제 해결에 적극적으로 도움을 주어서 무사히(?) 마무리를 할 수 있었습니다. 이번 경험으로 프로젝트가 어떻게 진행되는지 전체적인 흐름을 본 것 같았고 방향을 잡은것같아서 다음 파이널 프로젝트를 진행하는 것에 있어서 큰 초석이 될 것 같습니다.
 
 <br />
 
-## Contributor
+## 🕊 Contributor
 
-- KBW : [@naver.com](mailto:@naver.com)
-- LHS : [@gmail.com](mailto:@gmail.com)
-- LCW : [@naver.com](mailto:@naver.com)
-- KNH : [@gmail.com](mailto:@gmail.com)
-- WHK : [@naver.com](mailto:@naver.com)
-- LDB : [@naver.com](mailto:@naver.com)
+- KBW : https://github.com/dakdlzhf/shopping
+- LHS : https://github.com/gkrtjs406/semiproject_shopping
+- LCW : https://github.com/twobluerain/semiproject
+- KNH : https://github.com/evelynKr/shopping-website
+- WHK : https://github.com/WooHkeu/shoppingproject
+- LDB : https://github.com/olabeann/ShoppingMall
