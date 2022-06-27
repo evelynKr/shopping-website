@@ -61,25 +61,32 @@
 
 ### 주기능 2) 나의 정보
 
-> ![기능2](https://user-images.githubusercontent.com/103403660/175820412-f940a973-c4cc-4694-b467-73fc9b15dee5.png)
+> ![기능2](https://user-images.githubusercontent.com/103403660/175847112-0c0fc092-38b9-4f51-8e7a-46fb8c7a32b7.png)
+> ![기능2-2](https://user-images.githubusercontent.com/103403660/175847122-d445332e-6263-417c-9af8-da64effe7504.png)
+
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **고객**이 나의 정보 페이지에서 사진을 수정할 수 있습니다.</span>
 
 ### 주기능 3) 관리자 페이지
 
-> ![기능3](https://user-images.githubusercontent.com/103403660/175820413-590a019e-1dae-4a6a-b88d-4367a2cf9b98.png)
+> ![기능3](https://user-images.githubusercontent.com/103403660/175847116-ea87c5c4-c367-4884-9b63-59973ae97fa7.png)
+> ![기능3-1](https://user-images.githubusercontent.com/103403660/175847123-72861530-3b6c-429c-bb81-5ca1f9342ee6.png)
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **관리자**만이 숨겨진 탭에서 개별 상품을 조회할 수 있습니다.</span>
 
 ### 주기능 4) 제품 상세 페이지
 
-> ![기능4](https://user-images.githubusercontent.com/103403660/175820414-a957d264-8a09-41fc-b0bd-6af866945e91.png)
+![기능4](https://user-images.githubusercontent.com/103403660/175847118-b7828b26-1bf3-4a22-a553-4ca65a2aebea.png)
+![기능4-1](https://user-images.githubusercontent.com/103403660/175847124-a24dd681-e25a-430c-9e0c-78bc9b1c6c6e.png)
+![기능4-2](https://user-images.githubusercontent.com/103403660/175847127-315e26dd-7832-4b37-9b13-3e6abd433a0f.png)
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **고객**은 상품 상세 페이지에서 댓글을 생성할 수 있으며 본인이 쓴 댓글만 삭제/수정이 가능합니다.</span>
 
 ### 주기능 5) 공지사항 페이지
 
-> ![기능5](https://user-images.githubusercontent.com/103403660/175820408-488f2b3f-346a-4e7b-ab6b-1956f8abcc96.png)
+![기능5](https://user-images.githubusercontent.com/103403660/175847120-b5bce74d-dfa7-4b6a-8922-2fab6b88b909.png)
+![기능5-1](https://user-images.githubusercontent.com/103403660/175847126-86303e4c-40c3-46dd-a0db-69fae7a69f40.png)
+![기능5-2](https://user-images.githubusercontent.com/103403660/175847128-5ff7df47-f315-4de6-9c28-97ce32154adc.png)
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **고객**은 공지사항을 조회할 수 있지만 **관리자**는 등록/수정/삭제가 가능합니다.</span>
 
