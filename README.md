@@ -79,6 +79,7 @@
 ![기능4](https://user-images.githubusercontent.com/103403660/175847118-b7828b26-1bf3-4a22-a553-4ca65a2aebea.png)
 ![기능4-1](https://user-images.githubusercontent.com/103403660/175847124-a24dd681-e25a-430c-9e0c-78bc9b1c6c6e.png)
 ![기능4-2](https://user-images.githubusercontent.com/103403660/175847127-315e26dd-7832-4b37-9b13-3e6abd433a0f.png)
+![기능4-3](https://user-images.githubusercontent.com/103403660/175847781-35ed35cf-7a14-47cb-badf-5bb300c0994c.png)
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **고객**은 상품 상세 페이지에서 댓글을 생성할 수 있으며 본인이 쓴 댓글만 삭제/수정이 가능합니다.</span>
 
@@ -87,6 +88,7 @@
 ![기능5](https://user-images.githubusercontent.com/103403660/175847120-b5bce74d-dfa7-4b6a-8922-2fab6b88b909.png)
 ![기능5-1](https://user-images.githubusercontent.com/103403660/175847126-86303e4c-40c3-46dd-a0db-69fae7a69f40.png)
 ![기능5-2](https://user-images.githubusercontent.com/103403660/175847128-5ff7df47-f315-4de6-9c28-97ce32154adc.png)
+![기능5-3](https://user-images.githubusercontent.com/103403660/175847789-aa8f5ff6-e77d-4d94-9c3d-14fdaa47f3a0.png)
 
 <span style="color: #2D3748; background-color:#fff5b1;"> **고객**은 공지사항을 조회할 수 있지만 **관리자**는 등록/수정/삭제가 가능합니다.</span>
 
