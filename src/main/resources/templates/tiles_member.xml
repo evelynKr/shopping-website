@@ -10,11 +10,25 @@
 		<put-attribute name="header"
 			value="/WEB-INF/views/template/top.jsp" />
 	</definition>
-
+	<definition name="/QNA/naver_chatting" extends="main">
+		<put-attribute name="title" value="QNA"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/QNA/naver_chatting.jsp" />
+	</definition>
 	<definition name="/home" extends="main">
 		<put-attribute name="title" value="기본페이지"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/index.jsp" />
+	</definition>
+	<definition name="/member/pwfind" extends="main">
+		<put-attribute name="title" value="비번찾기"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/pwFindForm.jsp" />
+	</definition>
+	<definition name="/member/idfind" extends="main">
+		<put-attribute name="title" value="아이디찾기"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/idFindForm.jsp" />
 	</definition>
 	<definition name="/member/agree" extends="main">
 		<put-attribute name="title" value="약관동의"></put-attribute>
@@ -55,15 +69,5 @@
 		<put-attribute name="title" value="나의페이지"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/mypage.jsp" />
-	</definition>
-	<definition name="/member/idfind" extends="main">
-		<put-attribute name="title" value="아이디찾기"></put-attribute>
-		<put-attribute name="body"
-			value="/WEB-INF/views/member/idfindForm.jsp" />
-	</definition>
-	<definition name="/member/pwfind" extends="main">
-		<put-attribute name="title" value="패스워드찾기"></put-attribute>
-		<put-attribute name="body"
-			value="/WEB-INF/views/member/pwfindForm.jsp" />
 	</definition>
 </tiles-definitions>

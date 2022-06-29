@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service("com.study.notice.NoticeServiceImpl")
 public class NoticeServiceImpl implements NoticeService {
-
+  
   @Autowired
   private NoticeMapper mapper;
-  
+
   @Override
   public int create(NoticeDTO dto) {
     // TODO Auto-generated method stub
@@ -32,8 +32,9 @@ public class NoticeServiceImpl implements NoticeService {
 
   @Override
   public void upCnt(int noticeno) {
-    // TODO Auto-generated method stub
+    
     mapper.upCnt(noticeno);
+    
   }
 
   @Override

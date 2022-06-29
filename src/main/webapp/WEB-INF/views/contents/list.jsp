@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="util" uri="/ELFunctions" %>
 
+ 
 <!DOCTYPE html> 
 <html> 
 <head>
@@ -10,12 +11,13 @@
   <meta charset="utf-8">
    <script type="text/javascript">
      function read(contentsno){
-       var url = "/contents/read";
+       var url = "read";
        url += "?contentsno="+contentsno;
        url += "&col=${col}";
        url += "&word=${word}";
        url += "&nowPage=${nowPage}";
        location.href=url;
+ 
      }
      
      function fileDown(filename){
@@ -54,7 +56,7 @@
     </div>
     <button type="submit" class="btn btn-default" >검색</button>
     <button type="button" class="btn btn-default" 
-    	onclick="location.href='/admin/contents/create'">등록</button>
+    onclick="location.href='/admin/contents/create'">등록</button>
   </form>
   
   <table class="table table-striped">
@@ -101,10 +103,10 @@
         <a href="./delete/${dto.contentsno }">
           <span class="glyphicon glyphicon-trash"></span>
         </a>
-        /<%-- 1. (링크클릭하면)updateFile를 호출하면서 jsp에서 /(경로)${값}을 컨트롤러에 보낸다. --%>
+        /
         <a href="./updateFile/${dto.contentsno }/${dto.filename}">
           <span class="glyphicon glyphicon-picture"></span>
-        </a>  
+        </a>     
     </td>
    </tr>
    </c:forEach>

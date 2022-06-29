@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 
 @Service("com.study.review.ReviewServiceImpl")
 public class ReviewServiceImpl implements ReviewService {
-
+  
   @Autowired
   private ReviewMapper mapper;
-
+  
   @Override
-  public int create(ReviewDTO reviewDTO) {
+  public int create(ReviewDTO ReviewDTO) {
     // TODO Auto-generated method stub
-    return mapper.create(reviewDTO);
+    return mapper.create(ReviewDTO);
   }
 
   @Override
@@ -31,9 +31,9 @@ public class ReviewServiceImpl implements ReviewService {
   }
 
   @Override
-  public int update(ReviewDTO reviewDTO) {
+  public int update(ReviewDTO ReviewDTO) {
     // TODO Auto-generated method stub
-    return mapper.update(reviewDTO);
+    return mapper.update(ReviewDTO);
   }
 
   @Override
@@ -47,6 +47,17 @@ public class ReviewServiceImpl implements ReviewService {
     // TODO Auto-generated method stub
     return mapper.total(contentsno);
   }
-  
-  
+
+  @Override
+  public int bdelete(int contentsno) {
+    // TODO Auto-generated method stub
+    return mapper.bdelete(contentsno);
+  }
+
+  @Override
+  public int rcount(int contentsno) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
 }

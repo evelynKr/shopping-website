@@ -5,31 +5,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.study.contents.ContentsMapper">
-
 	<select id="getCategory" resultType="Map">
-		select cateno, catename 
-		from category
+		select cateno, catename from category
 		where categrpno is null
 	</select>
-
-	<select id="detail" parameterType="int"
-		resultType="com.study.contents.ContentsDTO">
-		select contentsno, cateno, pname, price, filename, stock, detail
-		from contents
-		where contentsno = #{conentsno}
-	</select>
-
-	<select id="read" parameterType="int"
-		resultType="com.study.contents.ContentsDTO">
-		select contentsno, cateno, pname, price, filename, stock, rdate
-		from contents
+	
+	<select id="detail" parameterType="int" resultType="com.study.contents.ContentsDTO">   
+        select contentsno, cateno, pname, price, filename, stock, detail
+        from contents
+        where contentsno = #{conentsno}
+    </select>
+	<select id="read" parameterType="int" resultType="com.study.contents.ContentsDTO">
+		select contentsno, cateno, pname, price, filename, detail, stock 
+		from contents 
 		where contentsno = #{contentsno}
 	</select>
-
 	<update id="updateFile" parameterType="Map">
 		update contents
-		set
-		filename = #{fname}
+		set filename = #{fname}
 		where contentsno = #{contentsno}
 	</update>
 
@@ -49,33 +42,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</choose>
 		</where>
 	</select>
-
-	<select id="mainlist" parameterType="map"
-		resultType="com.study.contents.ContentsDTO">
-		select contentsno, cateno, pname, price, filename, stock
-		from contents
-
-		<where>
-			<choose>
-				<when test="col=='pname'">
-					pname like concat('%', #{word} ,'%')
-				</when>
-				<when test="col=='price'">
-					price like concat('%', #{word} ,'%')
-				</when>
-			</choose>
-			and cateno = #{cateno}
-		</where>
-		order by contentsno desc
-		limit #{sno}, #{eno}
-	</select>
+	
+	<select id="mainlist" parameterType="map" resultType="com.study.contents.ContentsDTO">
+         select contentsno, cateno,pname, price, filename, stock
+         from contents
+                 
+         <where>
+         <choose>
+             <when test="col=='pname'">
+                 pname like concat('%', #{word} ,'%')
+             </when>
+             <when test="col=='price'">
+                 price like concat('%', #{word} ,'%')
+             </when>
+         </choose>
+          and cateno = #{cateno}
+         </where>
+         order by contentsno desc
+         limit #{sno}, #{eno}
+    </select>
 
 	<select id="list" parameterType="Map"
 		resultType="com.study.contents.ContentsDTO">
 
-		select contentsno, cateno,pname, price, filename, stock, rdate
-		from
-		contents
+		select contentsno, cateno,pname, price, filename, stock,rdate
+		from contents
 		<where>
 			<choose>
 				<when test="col=='pname'">
@@ -94,6 +85,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	</select>
 
+
+
 	<update id="update"
 		parameterType="com.study.contents.ContentsDTO">
 		update contents
@@ -108,7 +101,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="create"
 		parameterType="com.study.contents.ContentsDTO">
 		insert into contents(cateno, pname, price, filename, detail, rdate, stock)
-		values( #{cateno},#{pname}, #{price}, #{filename}, #{detail}, sysdate(), #{stock})
+		values( #{cateno},#{pname}, #{price}, #{filename}, #{detail},
+		sysdate(), #{stock})
 	</insert>
 
 </mapper>

@@ -7,7 +7,8 @@
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style2.css">
+  <script type="text/javascript" src="/js/cart.js"></script>
   <script type="text/javascript">
   function cart(){
 	  if('${sessionScope.id}' == ''){
@@ -45,6 +46,20 @@
 		  return;
 	  }
 	  //주문서 작성으로 이동 주문생성
+	  let count = document.getElementById('qty').value; //$('#qty').val()
+	  let select = document.querySelector('.form-select');
+	  let i = select.selectedIndex;
+	  if(i==0 && !select.disabled){
+		  alert('사이즈를 선택하세요');
+		  select.focus();
+		  return
+	  }else if(select.disabled){
+		  select[i].value=0;
+	  }
+	  
+	  let url = "/order/create/order/${dto.contentsno}/"+count+"/"+select[i].value;
+	  location.href=url;
+	  
   }
   </script>
 </head>
@@ -68,9 +83,9 @@
      <c:when test="${dto.cateno==1}">
      <select class="form-select" aria-label="Default select example">
 	  <option selected>사이즈 선택</option>
-	  <option value="1">L</option>
-	  <option value="2">M</option>
-	  <option value="3">S</option>
+	  <option value="L">L</option>
+	  <option value="M">M</option>
+	  <option value="S">S</option>
 	 </select>
      </c:when>
      <c:when test="${dto.cateno==2 }">
@@ -183,9 +198,9 @@ aria-labelledby="myModalLabel" aria-hidden="true">
   let nPage = "${nPage}";
   let id = "${sessionScope.id}";
 </script>
-
  <!-- 댓글처리 관련 Javascript 파일 추가-->
 <script src="/js/producer.js" defer></script>
+ 
 <script src="/js/consumer.js" defer></script>
  
 </body>

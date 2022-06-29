@@ -1,7 +1,6 @@
 package com.study.contents;
 
 import java.io.IOException;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +32,7 @@ public class ContentsController {
 
   @GetMapping("/contents/detail/{contentsno}")
   public String detail(@PathVariable("contentsno") int contentsno, 
-     Model model, HttpServletRequest request) {
+      Model model, HttpServletRequest request) {
       
      model.addAttribute("dto",service.detail(contentsno));
      /* 댓글 관련 시작 */
@@ -42,6 +41,10 @@ public class ContentsController {
              nPage = Integer.parseInt(request.getParameter("nPage"));
      }
      int recordPerPage = 3;
+
+     //oracle
+     //int sno = ((nPage - 1) * recordPerPage) + 1;
+     //int eno = nPage * recordPerPage;
 
     //mysql
     int sno = (nPage - 1) * recordPerPage;
@@ -74,6 +77,10 @@ public class ContentsController {
       nowPage = Integer.parseInt(request.getParameter("nowPage"));
     }
     int recordPerPage = 8;// 한페이지당 보여줄 레코드갯수
+ 
+    //(Oracle) DB에서 가져올 순번-----------------
+    //int sno = ((nowPage - 1) * recordPerPage) + 1;
+    //int eno = nowPage * recordPerPage;
 
     //(MySQL) DB에서 가져올 순번-----------------
     int sno = (nowPage - 1) * recordPerPage;
@@ -168,15 +175,6 @@ public class ContentsController {
 
     return "/contents/update";
 
-  }
-  
-  @GetMapping("/contents/read")
-  public String read(int contentsno, Model model) {
-      ContentsDTO dto = service.read(contentsno);
-      log.info("dto:"+dto);
-      model.addAttribute("dto", dto);
-
-      return "/contents/read";
   }
 
   @PostMapping("/contents/create")

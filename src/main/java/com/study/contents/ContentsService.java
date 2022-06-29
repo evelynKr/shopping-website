@@ -14,7 +14,7 @@ public interface ContentsService {
   List<ContentsDTO> list(Map map);
 
   int updateFile(Map map);
-
+  
   ContentsDTO read(int contentsno);
   
   List<Map> getCategory();

@@ -5,18 +5,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.study.member.MemberMapper">
 
-	<select id="pwFind" parameterType="Map" resultType="String">
-		select passwd from member
-		where mname = #{mname}
-		and id = #{id}
-	</select>
-
-	<select id="idFind" parameterType="Map" resultType="String">
-		select id from member
-		where mname = #{mname}
-		and email = #{email}
-	</select>
-	
 	<resultMap type="com.study.member.MemberDTO" id="memberOrder">
 		<result property="id" column="id" />
 		<result property="mname" column="mname" />
@@ -27,7 +15,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<collection property="list" column="id" javaType="List"
 			ofType="com.study.orders.OrdersDTO" resultMap="orderList" />
 	</resultMap>
-	
 	<resultMap type="com.study.orders.OrdersDTO" id="orderList">
 		<result property="orderno" column="orderno" />
 		<result property="odate" column="odate" />
@@ -36,14 +23,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<collection property="list" column="id" javaType="List"
 			ofType="com.study.orders.OrderdetailDTO" resultMap="detailList" />
 	</resultMap>
-	
 	<resultMap type="com.study.orders.OrderdetailDTO"
 		id="detailList">
 		<result property="quantity" column="quantity" />
 		<result property="pname" column="pname" />
 		<result property="contentsno" column="contentsno" />
 	</resultMap>
-	
 	<select id="mypage" parameterType="String"
 		resultMap="memberOrder">
 		select m.id, m.mname, m.fname, m.zipcode, m.address1, m.address2,
@@ -53,6 +38,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		on m.id = o.id left outer join order_detail d
 		on o.orderno = d.orderno
 		where m.id=#{id}
+	</select>
+
+
+	<select id="pwFind" parameterType="Map" resultType="String">
+		select passwd from member
+		where mname = #{mname}
+		and id = #{id}
+	</select>
+	<select id="idFind" parameterType="Map" resultType="String">
+		select id from member
+		where mname = #{mname}
+		and email = #{email}
 	</select>
 
 	<select id="total" parameterType="Map" resultType="int">
@@ -97,7 +94,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<update id="updateFile" parameterType="Map">
 		update member
-		set fname = #{fname}
+		set fname =
+		#{fname}
 		where id = #{id}
 	</update>
 	<update id="update" parameterType="com.study.member.MemberDTO">
@@ -106,24 +104,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		email = #{email},
 		zipcode = #{zipcode},
 		address1 = #{address1},
-		address2 = #{address2},
+		address2
+		= #{address2},
 		job = #{job}
 		where id = #{id}
 	</update>
 
 	<select id="read" parameterType="String"
 		resultType="com.study.member.MemberDTO">
-		select * from member
+		select *
+		from member
 		where id = #{id}
 	</select>
 
 	<select id="getGrade" parameterType="String" resultType="Map">
-		select grade, mname
+		select
+		grade, mname
 		from member
 		where id = #{id}
 	</select>
 	<select id="loginCheck" parameterType="Map" resultType="int">
-		select count(*) from member
+		select
+		count(*) from member
 		where id = #{id}
 		and passwd = #{passwd}
 	</select>
@@ -149,4 +151,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		VALUES(#{id}, #{passwd},#{mname}, #{tel}, #{email}, #{zipcode},
 		#{address1}, #{address2}, #{job}, sysdate(), #{fname}, 'H')
 	</insert>
+
+
 </mapper>

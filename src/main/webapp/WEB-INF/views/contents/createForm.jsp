@@ -44,11 +44,10 @@
 
 <div class="container">
 <h1 class="col-sm-offset-2 col-sm-10">상품 등록</h1>
-<!-- enctype을 명시해줘야 컨트롤러에서 postMapping submit이 호출된다 -->
 <form class="form-horizontal" 
       action="/contents/create"
       method="post"
-      enctype="multipart/form-data" 
+      enctype="multipart/form-data"
       onsubmit="return checkIn(this)">
 
   <div class="form-group">
@@ -101,7 +100,7 @@
   </div>
    <div class="form-group">
    <div class="col-sm-offset-2 col-sm-5">
-    <button class="btn" >등록</button>
+    <button class="btn">등록</button>
     <button type="reset" class="btn">취소</button>
    </div>
  </div>

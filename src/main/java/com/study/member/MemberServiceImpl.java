@@ -1,14 +1,14 @@
 package com.study.member;
- 
+
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
- 
+
 @Service("com.study.member.MemberServiceImpl")
 public class MemberServiceImpl implements MemberService {
-        
+
   @Autowired
   private MemberMapper mapper;
 
@@ -77,7 +77,7 @@ public class MemberServiceImpl implements MemberService {
     // TODO Auto-generated method stub
     return mapper.mypage(id);
   }
-  
+
   @Override
   public String idFind(Map<String, String> map) {
     // TODO Auto-generated method stub
@@ -90,5 +90,4 @@ public class MemberServiceImpl implements MemberService {
     return mapper.pwFind(map);
   }
 
- 
 }

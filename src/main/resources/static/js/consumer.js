@@ -117,7 +117,6 @@ $(".chat").on("click", "li", function (e) {
     });
 });
 
-//댓글 수정
 modalModBtn.on("click", function (e) {
  
   let reply = { rnum: modal.data("rnum"), content: modalInputContent.val() };
